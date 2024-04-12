@@ -1,0 +1,11 @@
+version: '3.8'
+
+  springboot-container:
+    #build: .
+    image: mypet-spring-boot:v1
+    container_name: springboot-container 
+    depends_on:
+      - mysql-db
+    ports:
+      - 9090:8082
+    restart: always
